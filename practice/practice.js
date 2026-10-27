@@ -27,6 +27,7 @@
       <p class="qid">${esc(q.id)}${q.r ? ' · ' + esc(q.r) : ''}</p><h3 class="q">${esc(q.q)}</h3>
       ${q.f ? `<img class="fig" src="${cfg.figBase}${esc(q.f)}.png" alt="Figure ${esc(q.f)}" loading="lazy">` : ''}
       <ol class="opts">${q.a.map((t, k) => `<li><button data-k="${k}" class="${a < 0 ? '' : k === q.c ? 'ok' : k === a ? 'bad' : 'dim'}" ${a >= 0 ? 'disabled' : ''}><b>${'ABCD'[k]}</b> ${esc(t)}</button></li>`).join('')}</ol>
+      ${a >= 0 && q.x ? `<p class="exp"><b>Why:</b> ${esc(q.x)}</p>` : ''}
       <div class="nav"><button class="sec" id="prev" ${i ? '' : 'disabled'}>Back</button>
       ${i < qs.length - 1 ? `<button id="next" ${a < 0 ? 'class="sec"' : ''}>Next</button>` : `<button id="finish">Finish</button>`}</div>
       <p class="small">Pass mark: ${p.pass} of ${p.n} (${Math.round(p.pass / p.n * 100)}%).</p>`;
@@ -47,7 +48,7 @@
       <p>${mode === 'exam' ? (pass ? 'You would have passed this practice exam. Aim for 85% or more three times in a row before the real one.' : `You need ${p.pass} to pass. Review the questions below and try again.`) : 'Topic practice finished.'}${best && mode === 'exam' ? ` Your best on this device: ${best}%.` : ''}</p></div>
       <div class="cta">${cfg.cta}</div>
       <div class="nav"><button id="again">New practice exam</button></div>
-      ${wrong.length ? `<h3>Review (${wrong.length})</h3>` + wrong.map(x => `<div class="rev"><p class="qid">${esc(x.q.id)}</p><p>${esc(x.q.q)}</p><p class="okt">Correct: ${'ABCD'[x.q.c]}. ${esc(x.q.a[x.q.c])}</p>${x.a >= 0 ? `<p class="badt">Your answer: ${'ABCD'[x.a]}. ${esc(x.q.a[x.a])}</p>` : '<p class="badt">Not answered</p>'}</div>`).join('') : ''}`;
+      ${wrong.length ? `<h3>Review (${wrong.length})</h3>` + wrong.map(x => `<div class="rev"><p class="qid">${esc(x.q.id)}</p><p>${esc(x.q.q)}</p><p class="okt">Correct: ${'ABCD'[x.q.c]}. ${esc(x.q.a[x.q.c])}</p>${x.q.x ? `<p class="exp">${esc(x.q.x)}</p>` : ''}${x.a >= 0 ? `<p class="badt">Your answer: ${'ABCD'[x.a]}. ${esc(x.q.a[x.a])}</p>` : '<p class="badt">Not answered</p>'}</div>`).join('') : ''}`;
     $('#again', app).onclick = () => start(app.dataset.part);
     window.scrollTo({ top: app.offsetTop - 12 });
   }
