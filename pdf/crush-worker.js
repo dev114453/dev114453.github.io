@@ -1,4 +1,4 @@
-/* PDF Crush Web encoder worker: scales a page image and encodes it as JPEG. Runs on this device only. */
+/* FitMyPDF Web encoder worker: scales a page image and encodes it as JPEG. Runs on this device only. */
 'use strict';
 const cache = new Map();
 function toGray(ctx, w, h) {

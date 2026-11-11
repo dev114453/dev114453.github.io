@@ -1,4 +1,4 @@
-/* PDF Crush Web: compress PDFs, make PDFs from images and merge PDFs, entirely in this browser.
+/* FitMyPDF Web: compress PDFs, make PDFs from images and merge PDFs, entirely in this browser.
    No uploads, no analytics, no cookies. Libraries (pdf.js, pdf-lib) are served from this same site. */
 (function () {
   'use strict';
@@ -176,7 +176,7 @@
     const PDFLib = await needPdfLib();
     prog && prog(T.building, null);
     const doc = await PDFLib.PDFDocument.create();
-    doc.setProducer('PDF Crush Web'); doc.setCreator('PDF Crush Web');
+    doc.setProducer('FitMyPDF Web'); doc.setCreator('FitMyPDF Web');
     for (let i = 0; i < jpegs.length; i++) {
       const img = await doc.embedJpg(jpegs[i]);
       const pg = doc.addPage([masters[i].pw, masters[i].ph]);
@@ -247,7 +247,7 @@
     let extra = Math.max(0, want - bytes.length), out = bytes;
     for (let i = 0; i < 4; i++) {
       const doc = await PDFLib.PDFDocument.load(bytes, { updateMetadata: false });
-      const head = '<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>\n<x:xmpmeta xmlns:x="adobe:ns:meta/"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description rdf:about="" xmlns:pdf="http://ns.adobe.com/pdf/1.3/"><pdf:Producer>PDF Crush Web</pdf:Producer></rdf:Description></rdf:RDF></x:xmpmeta>\n';
+      const head = '<?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>\n<x:xmpmeta xmlns:x="adobe:ns:meta/"><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><rdf:Description rdf:about="" xmlns:pdf="http://ns.adobe.com/pdf/1.3/"><pdf:Producer>FitMyPDF Web</pdf:Producer></rdf:Description></rdf:RDF></x:xmpmeta>\n';
       const line = ' '.repeat(99) + '\n';
       const pad = line.repeat(Math.max(0, Math.ceil(extra / 100)));
       const xmp = new TextEncoder().encode(head + pad + '<?xpacket end="w"?>');
@@ -496,7 +496,7 @@
       pages.forEach((p) => outDoc.addPage(p));
       await tick();
     }
-    outDoc.setProducer('PDF Crush Web');
+    outDoc.setProducer('FitMyPDF Web');
     prog(T.building, 0.95);
     const out = await outDoc.save({ useObjectStreams: true });
     showResult(out, total, [T.merged(files.length), T.pages(outDoc.getPageCount())], 'merged.pdf', 'ok');
