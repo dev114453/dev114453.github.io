@@ -11,15 +11,23 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.6em}
 </head>
 <body>
 <h1>Stock Alert – Privacy Policy</h1>
-<p>Last updated: 27 October 2026</p>
+<p>Last updated: 17 November 2026 (version 3.2)</p>
+<p>This policy covers <strong>Stock Alert</strong> (Google Play listing "Stock Alert: Alarm &amp; Net Worth", package name com.pdfcompress.stocktrack), an Android app published by the developer <strong>developer1021</strong>. Contact: devloper1021@gmail.com.</p>
 
-<p>Stock Alert ("the app") lets you follow stock prices, keep a watchlist and portfolio, and get price alerts. This policy explains what information the app handles.</p>
+<p>Stock Alert ("the app") lets you follow stock prices, get price alerts, keep a portfolio and see your net worth. This policy explains what information the app handles.</p>
 
 <h2>Information stored on your device</h2>
-<p>Your watchlist, portfolio entries, price alerts and settings are stored only on your device. We do not run user accounts and we do not upload this data to our own servers. Uninstalling the app deletes it.</p>
+<p>Your watchlist, portfolio entries, price alerts, net-worth items (deposits, retirement accounts, gold, property, cash, loans and other assets you add), family profiles, goals, net-worth history and settings are stored only on your device. Family members are labels you create on your phone; nothing is shared with them or anyone else. We do not run user accounts and we do not upload this data to our own servers. Uninstalling the app deletes it. If Android's own device backup is turned on, Android may include the app's data file in your Google backup, as for other apps.</p>
+
+<h2>Importing screenshots, PDFs and spreadsheets</h2>
+<p>Screenshots and PDFs are read on your phone. They are never uploaded. When you import a screenshot, a PDF statement (including password-protected statements such as CAMS/KFintech CAS) or a CSV/Excel file, the app reads it on your device: text in images and scanned pages is recognised with Google ML Kit's on-device text recognition, whose model is built into the app; PDF text is read with an on-device PDF library. The files, the text read from them and any PDF password you type stay on your phone; the app does not copy the files or store the password, and it only keeps the rows you choose to import. ML Kit is configured in the app so that it cannot send its usage statistics.</p>
+<p>Two optional, separate network requests can follow an import, and neither contains your files or the text read from them: if you tap "Find" to match a company name to a stock symbol, the words in the search box are sent to the market data provider, exactly like the app's search box; and when you have Indian mutual funds in Net worth, the app downloads the public AMFI daily NAV file (the same file for everyone, no information about you in the request). After import, prices for the imported symbols are requested like for any stock you track.</p>
+
+<h2>App lock and protected backups</h2>
+<p>App lock uses Android's fingerprint, face or screen-lock check. The app only learns whether the check succeeded; it never receives biometric data. Backups you export can be protected with a password: the file is encrypted on your device (AES-256-GCM, key derived from your password with PBKDF2). The password is never stored or sent. If you forget it, the backup cannot be opened.</p>
 
 <h2>Market data requests</h2>
-<p>To show prices, charts and news, the app requests market data for the stock symbols you view or track from a third-party market data provider (currently Yahoo Finance). These requests contain the stock symbol and standard technical information (such as your IP address) that any internet request includes. They do not contain your name, contacts or portfolio quantities.</p>
+<p>To show prices, charts and news, the app requests market data for the stock symbols you view or track (including those in your portfolio and net worth, such as gold and crypto prices and currency rates) from a third-party market data provider (currently Yahoo Finance). These requests contain the stock symbol and standard technical information (such as your IP address) that any internet request includes. They do not contain your name, contacts, quantities, amounts or net worth. Indian mutual fund prices come from AMFI's public daily file, as described above.</p>
 
 <h2>Advertising</h2>
 <p>The free version shows ads served by Google AdMob. AdMob may collect and use device identifiers (such as the Android advertising ID), approximate location derived from IP address, and ad interaction data to serve, measure and personalise ads and to prevent fraud. Where required (for example in the EEA and UK) the app asks for your consent before personalised ads are shown, and you can change your choice at any time from the app's settings ("Privacy choices"). See <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a>.</p>
@@ -28,7 +36,7 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.6em}
 <p>Stock Alert Pro subscriptions are processed by Google Play. We do not receive or store your payment details. The app only checks with Google Play whether you have an active subscription.</p>
 
 <h2>Notifications</h2>
-<p>If you allow notifications, the app shows price-alert notifications generated on your device. Alert checks run on your device in the background.</p>
+<p>If you allow notifications, the app shows price-alert notifications generated on your device. Alert checks run on your device in the background. The optional morning summary and the monthly "update your values" reminder are also created on your device; with app lock and "Hide amounts" on, the morning summary shows percentages only.</p>
 
 <h2>Children</h2>
 <p>The app is not directed at children under 13 and does not knowingly collect information from children.</p>
