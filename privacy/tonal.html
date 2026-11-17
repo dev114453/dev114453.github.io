@@ -1,29 +1,64 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GlowShop Photo Editor – Privacy Policy</title>
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}h1{font-size:1.6em}h2{font-size:1.15em;margin-top:1.6em}small{color:#666}</style></head>
+<title>GlowRoll – Privacy Policy</title>
+<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}h1{font-size:1.6em}h2{font-size:1.15em;margin-top:1.6em}small{color:#666}li{margin:.2em 0}</style></head>
 <body>
-<h1>GlowShop Photo Editor – Privacy Policy</h1>
-<small>Last updated: 15 November 2026</small>
-<p>GlowShop (formerly called Tonal) is a photo editor for Android published by developer1021. This policy explains how the app handles your information. In short: <strong>GlowShop does not collect, store on our servers, or share any personal data. Your photos never leave your phone.</strong> If you buy GlowShop Pro, the purchase is processed by Google Play, not by us.</p>
-<h2>Your photos</h2>
-<p>Photos you open in GlowShop are processed entirely on your device. GlowShop only gets access to the photos you pick through Android's photo picker. Your photos are never uploaded anywhere.</p>
-<h2>Edits saved on your device</h2>
-<p>So you can come back to an edit, GlowShop keeps your edit settings and a small preview image in the app's private storage on your phone. Edited photos you export are saved as new images in your gallery (Pictures/GlowShop; older exports stay in Pictures/Tonal). Your original photos are never changed. You can remove saved edits from the app's home screen, or remove everything by clearing the app's storage or uninstalling it.</p>
-<h2>On-device features</h2>
-<p>"AI Select Person", "AI Select Background" and background blur use a machine-learning model (Google ML Kit selfie segmentation) that is bundled inside the app and runs on your device. No image is sent anywhere to use them.</p>
-<h2>GlowShop Pro purchases (Google Play Billing)</h2>
-<p>GlowShop is free to use. Optional GlowShop Pro (a yearly subscription with a free trial, or a one-time lifetime purchase) is sold through Google Play Billing. When you buy, subscribe, start a trial or tap "Restore purchase", the app talks to the Google Play Store app on your phone, and Google processes the payment under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the Google Play Terms of Service.</p>
+<h1>GlowRoll – Privacy Policy</h1>
+<small>Last updated: 17 November 2026</small>
+<p>GlowRoll (formerly called GlowShop, and Tonal before that) is a photo gallery and photo editor for Android published by developer1021. This policy explains how the app handles your information. In short: <strong>GlowRoll does not collect, upload, store on our servers, or share any personal data. Your photos and videos are read and processed on your phone and never leave it.</strong> The app has no sign-in, no ads and no analytics, and it does not request Android's internet permission. If you buy GlowRoll Pro, the purchase is processed by Google Play, not by us.</p>
+
+<h2>Your photo and video library</h2>
+<p>GlowRoll is a gallery, so it asks Android for permission to read the photos and videos on your device (READ_MEDIA_IMAGES and READ_MEDIA_VIDEO; on Android 12 and older, READ_EXTERNAL_STORAGE). You choose: allow all, allow only selected photos (Android 14 and newer), or allow none and pick photos one at a time with Android's photo picker. GlowRoll reads your library on the device to show it as a gallery, to search it and to make the features below. Nothing is uploaded.</p>
+<p>Deleting always goes through Android's own confirmation (the system trash). GlowRoll never changes your original photos: edits, erased photos, stickers, recaps and photo dumps are saved as new files (Pictures/GlowRoll and Movies/GlowRoll).</p>
+
+<h2>Google Photos and other apps</h2>
+<p>"Add from Google Photos" opens Android's system photo picker. You choose the photos there; GlowRoll only receives the photos you pick and keeps a link to them (not a copy). GlowRoll does not connect to your Google Photos account or any cloud service.</p>
+
+<h2>On-device AI</h2>
+<p>All of GlowRoll's AI runs on your phone. No photo, video, text or result is sent to us or to any server by GlowRoll.</p>
+<ul>
+<li><strong>Sorting and search (Google ML Kit):</strong> GlowRoll builds a private index on your phone with object labels (for example "dog" or "food"), text found in photos, main colours, sharpness and brightness measures, and a small "fingerprint" used to spot look-alike shots. Faces are only <em>detected</em> (to prefer shots where eyes are open); GlowRoll does not recognise or identify people and stores no face data.</li>
+<li><strong>Vibe search (SigLIP 2 pack):</strong> if you choose to get it, an AI model pack (about 134 MB) is delivered by Google Play as an asset pack. It turns your photos and your search words into numbers that are compared on your phone. These numbers are stored in the app's private storage.</li>
+<li><strong>Stickers:</strong> cut-outs use ML Kit subject or selfie segmentation, run on your device by the app and Google Play services.</li>
+<li><strong>Magic eraser (MI-GAN):</strong> the model is bundled in the app and runs on your phone. Erased copies are labelled as AI-edited inside the file (IPTC "Digital Source Type" metadata).</li>
+<li><strong>AI captions (Gemini Nano, where available):</strong> on phones that support it, caption ideas are written by Gemini Nano through Android AICore, which runs on the device. GlowRoll gives it the cover photo and the on-device labels; GlowRoll does not send them anywhere. AI captions are labelled as AI-generated. On other phones GlowRoll uses built-in templates.</li>
+</ul>
+<p>You can delete the search index with Me &gt; Rebuild search index, remove the vibe pack in Me, or remove everything by clearing the app's storage or uninstalling it.</p>
+
+<h2>Reporting AI results</h2>
+<p>If an AI result (a caption, a sticker text idea or an erased photo) is offensive or wrong, you can tap the flag or "Report" in the app. This opens your own email app with a message to us that contains the feature name, the AI text (if any) and the app and Android version. No photo is attached. Nothing is sent unless you send that email, and we use it only to look into the report.</p>
+
+<h2>Private vault</h2>
+<p>Photos you hide in the vault are encrypted (AES-256-GCM) and stored in the app's private storage. The key is protected by the Android Keystore, and the vault opens with Android's own fingerprint/face/PIN prompt; GlowRoll never sees your biometrics or PIN. Vault files are excluded from backups, so uninstalling GlowRoll or clearing its storage deletes them permanently. Restore them to your gallery first if you want to keep them.</p>
+
+<h2>Edits, stickers and widgets</h2>
+<p>So you can come back to an edit, GlowRoll keeps your edit settings and small previews in the app's private storage. Stickers you make are saved in the app; if you tap "Add to WhatsApp", WhatsApp reads that sticker pack from GlowRoll on your phone (WhatsApp's own privacy policy then applies). Home-screen widgets show one of your photos and your photo streak on your home screen.</p>
+
+<h2>Sharing</h2>
+<p>When you share, GlowRoll makes a copy. Location data is removed from that copy by default, and you can add or turn off a small "made with glowroll" tag. Where the copy goes is up to you and the app you share to.</p>
+
+<h2>GlowRoll Pro purchases (Google Play Billing)</h2>
+<p>GlowRoll is free to use. Optional GlowRoll Pro (a yearly subscription with a free trial, or a one-time lifetime purchase) is sold through Google Play Billing. When you buy, subscribe, start a trial or tap "Restore purchase", the app talks to the Google Play Store app on your phone, and Google processes the payment under the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and the Google Play Terms of Service.</p>
 <p>We never see or receive your name, email address, card or other payment details. The app only receives a confirmation from Google Play that Pro is owned (which product, whether it is active, and a purchase token used to acknowledge it), and it keeps that confirmation on your phone so Pro also works offline. We do not run a server that stores purchases. Google Play gives developers aggregate sales reports and order records for refunds and tax as part of operating Google Play; we use them only for that.</p>
 <p>You can cancel a subscription at any time in the Google Play Store (Profile &gt; Payments &amp; subscriptions &gt; Subscriptions). If you cancel during the free trial, you are not charged.</p>
+
 <h2>Network use</h2>
-<p>GlowShop itself does not connect to the internet: photo editing works fully offline. Purchases and purchase checks are handled by the Google Play Store app, which uses its own connection.</p>
+<p>GlowRoll does not request Android's internet permission, so the app itself cannot connect to the internet. Downloads it asks for (the vibe search pack, ML Kit models, Gemini Nano) and purchases are handled by Google Play, Google Play services and Android AICore on your phone, under Google's terms.</p>
+
 <h2>No accounts, ads or tracking</h2>
-<p>GlowShop has no sign-in, no advertising, and no analytics or tracking SDKs.</p>
+<p>GlowRoll has no sign-in, no advertising, and no analytics or tracking SDKs.</p>
+
 <h2>Permissions</h2>
-<p>On Android 9 and older, GlowShop asks for storage permission only to save exported photos to your gallery. On newer versions no runtime permission is needed. The app also declares Google Play's billing permission (com.android.vending.BILLING), which lets it offer GlowShop Pro through Google Play.</p>
+<ul>
+<li>Photos and videos (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_VISUAL_USER_SELECTED; READ_EXTERNAL_STORAGE on Android 12 and older): to show and organise your library.</li>
+<li>Storage (WRITE_EXTERNAL_STORAGE, Android 9 and older only): to save new photos to your gallery.</li>
+<li>Biometric (USE_BIOMETRIC): to open the private vault with Android's prompt.</li>
+<li>Billing (com.android.vending.BILLING): to offer GlowRoll Pro through Google Play.</li>
+<li>Background work (WAKE_LOCK, RECEIVE_BOOT_COMPLETED) and a data-sync foreground service used by Google Play to deliver the optional vibe search pack: to sort your photos on the phone (preferably while charging) and to finish that download.</li>
+</ul>
+
 <h2>Children</h2>
-<p>GlowShop is a general-audience app and does not knowingly collect any information from anyone, including children.</p>
+<p>GlowRoll is a general-audience app and does not knowingly collect any information from anyone, including children.</p>
 <h2>Changes</h2>
 <p>If this policy changes, the updated version will be posted on this page with a new date.</p>
 <h2>Contact</h2>
