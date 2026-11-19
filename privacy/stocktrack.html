@@ -11,7 +11,7 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.6em}
 </head>
 <body>
 <h1>Stock Alert – Privacy Policy</h1>
-<p>Last updated: 19 November 2026 (version 3.3)</p>
+<p>Last updated: 19 November 2026 (Android version 3.3; iPhone version 1.3)</p>
 <p>This policy covers <strong>Stock Alert</strong> (Google Play listing "Stock Alert: Alarm &amp; Net Worth", package name com.pdfcompress.stocktrack), an Android app published by the developer <strong>developer1021</strong>. Contact: devloper1021@gmail.com.</p>
 
 <p>Stock Alert ("the app") lets you follow stock prices, get price alerts, keep a portfolio and see your net worth. This policy explains what information the app handles.</p>
@@ -37,7 +37,12 @@ h1{font-size:1.6rem}h2{font-size:1.15rem;margin-top:1.6em}
 <p>Stock Alert Pro subscriptions are processed by Google Play. We do not receive or store your payment details. The app only checks with Google Play whether you have an active subscription.</p>
 
 <h2>Notifications</h2>
-<p>If you allow notifications, the app shows price-alert notifications generated on your device. Alert checks run on your device in the background. The optional morning summary and the monthly "update your values" reminder are also created on your device; with app lock and "Hide amounts" on, the morning summary shows percentages only.</p>
+<p>If you allow notifications, the app shows price-alert notifications generated on your device. Alert checks run on your device in the background. On iPhone, alerts can also be checked by our push server when Instant alerts is on (see "Instant alerts on iPhone" below). The optional morning summary and the monthly "update your values" reminder are also created on your device; with app lock and "Hide amounts" on, the morning summary shows percentages only.</p>
+
+<h2>Instant alerts on iPhone (server push)</h2>
+<p>The iPhone version of Stock Alert (bundle ID com.pdfcompress.stocktrack) has an optional feature called Instant alerts, which is on by default when you allow notifications. Because iPhone only lets apps check in the background now and then, a small server run by the developer checks your alert rules every minute while the relevant market is open and sends the notification through Apple Push Notification service (APNs), so alerts arrive even when the app is closed.</p>
+<p>For this, the app sends to the server: a random device ID and a random secret created by the app (used only to sign the app's requests), the push token Apple gives the app, your time zone and language, the app version, whether you have Stock Alert Pro, and your alert rules: the stock symbols, the alert type and thresholds, on/off and snooze state, the symbols of a watchlist used by a watchlist alert, the alarm tone, and the notification text in your language. It does not send your name, email, contacts, portfolio, quantities, amounts or net worth, and there is no account. The server looks up prices for the symbols in your rules from the market data provider, without any information about you.</p>
+<p>The server keeps your rules for as long as Instant alerts is on, and a log of alerts it sent for 14 days so the app can show them in History. Turning off Instant alerts in the app's Settings deletes your device ID, push token and rules from the server; devices that have not connected for 180 days are deleted automatically. This data is not linked to your identity, not used for tracking or advertising, and never sold or shared, except with the service providers needed to run the feature: Cloudflare (hosting) and Apple (delivering the notification).</p>
 
 <h2>Children</h2>
 <p>The app is not directed at children under 13 and does not knowingly collect information from children.</p>
