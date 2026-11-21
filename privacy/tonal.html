@@ -4,8 +4,8 @@
 <style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}h1{font-size:1.6em}h2{font-size:1.15em;margin-top:1.6em}small{color:#666}li{margin:.2em 0}</style></head>
 <body>
 <h1>GlowRoll – Privacy Policy</h1>
-<small>Last updated: 17 November 2026</small>
-<p>GlowRoll (formerly called GlowShop, and Tonal before that) is a photo gallery and photo editor for Android published by developer1021. This policy explains how the app handles your information. In short: <strong>GlowRoll does not collect, upload, store on our servers, or share any personal data. Your photos and videos are read and processed on your phone and never leave it.</strong> The app has no sign-in, no ads and no analytics, and it does not request Android's internet permission. If you buy GlowRoll Pro, the purchase is processed by Google Play, not by us.</p>
+<small>Last updated: 21 November 2026</small>
+<p>GlowRoll (formerly called GlowShop, and Tonal before that) is a photo gallery and photo editor for Android published by developer1021. This policy explains how the app handles your information. In short: <strong>GlowRoll does not collect, upload, store on our servers, or share any personal data. Your photos and videos are read and processed on your phone and never leave it.</strong> The app has no sign-in and no analytics. The free version shows ads from Google AdMob (see Advertising below); GlowRoll Pro has no ads. Ads never receive your photos. If you buy GlowRoll Pro, the purchase is processed by Google Play, not by us.</p>
 
 <h2>Your photo and video library</h2>
 <p>GlowRoll is a gallery, so it asks Android for permission to read the photos and videos on your device (READ_MEDIA_IMAGES and READ_MEDIA_VIDEO; on Android 12 and older, READ_EXTERNAL_STORAGE). You choose: allow all, allow only selected photos (Android 14 and newer), or allow none and pick photos one at a time with Android's photo picker. GlowRoll reads your library on the device to show it as a gallery, to search it and to make the features below. Nothing is uploaded.</p>
@@ -43,17 +43,18 @@
 <p>You can cancel a subscription at any time in the Google Play Store (Profile &gt; Payments &amp; subscriptions &gt; Subscriptions). If you cancel during the free trial, you are not charged.</p>
 
 <h2>Network use</h2>
-<p>GlowRoll does not request Android's internet permission, so the app itself cannot connect to the internet. Downloads it asks for (the vibe search pack, ML Kit models, Gemini Nano) and purchases are handled by Google Play, Google Play services and Android AICore on your phone, under Google's terms.</p>
-
-<h2>No accounts, ads or tracking</h2>
-<p>GlowRoll has no sign-in, no advertising, and no analytics or tracking SDKs.</p>
-
+<p>Since version 3.7 the free version of GlowRoll uses the internet only to load ads (Google AdMob) and to ask for ad consent where the law requires it (Google User Messaging Platform). Your photos, videos, search index, vault and edits are never sent anywhere. Downloads the app asks for (the vibe search pack, ML Kit models, Gemini Nano) and purchases are handled by Google Play, Google Play services and Android AICore on your phone, under Google's terms.</p>
+<h2>Advertising</h2>
+<p>The free version shows ads served by Google AdMob. AdMob may collect and use device identifiers (such as the Android advertising ID), approximate location derived from your IP address, and ad interaction data to serve, measure and personalise ads and to prevent fraud. Where required (for example in the EEA and UK) the app asks for your consent before personalised ads are shown, and you can change your choice at any time in Me &gt; Ad privacy choices. AdMob never receives your photos or anything from your library. GlowRoll Pro removes all ads. See <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a>.</p>
+<h2>No accounts or analytics</h2>
+<p>GlowRoll has no sign-in and no analytics or tracking SDKs of its own.</p>
 <h2>Permissions</h2>
 <ul>
 <li>Photos and videos (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_VISUAL_USER_SELECTED; READ_EXTERNAL_STORAGE on Android 12 and older): to show and organise your library.</li>
 <li>Storage (WRITE_EXTERNAL_STORAGE, Android 9 and older only): to save new photos to your gallery.</li>
 <li>Biometric (USE_BIOMETRIC): to open the private vault with Android's prompt.</li>
 <li>Billing (com.android.vending.BILLING): to offer GlowRoll Pro through Google Play.</li>
+<li>Internet and network state (INTERNET, ACCESS_NETWORK_STATE) and advertising ID (AD_ID): free version only, to load ads.</li>
 <li>Background work (WAKE_LOCK, RECEIVE_BOOT_COMPLETED) and a data-sync foreground service used by Google Play to deliver the optional vibe search pack: to sort your photos on the phone (preferably while charging) and to finish that download.</li>
 </ul>
 
